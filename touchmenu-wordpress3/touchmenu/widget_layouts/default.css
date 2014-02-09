@@ -1,0 +1,27 @@
+
+/**
+ * Touch Menu
+ *
+ * @version 1.1
+ * @author Creative Pulse
+ * @copyright Creative Pulse 2013-2014
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ * @link http://www.creativepulse.gr
+ */
+
+
+.wdg_touchmenu_header {
+	display: inline-block;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+.wdg_touchmenu_header_selected {
+	background-color: #fff;
+}
+
+.wdg_touchmenu_content {
+	background-color: #fff;
+	box-shadow: 7px 7px 14px rgba(0, 0, 0, 0.5);
+	padding: 10px 20px;
+	border-radius: 10px;
+}
