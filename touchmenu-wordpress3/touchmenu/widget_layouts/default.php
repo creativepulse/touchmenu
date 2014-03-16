@@ -3,23 +3,13 @@
 /**
  * Touch Menu
  *
- * @version 1.1
+ * @version 1.2
  * @author Creative Pulse
  * @copyright Creative Pulse 2013-2014
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  * @link http://www.creativepulse.gr
  */
 
-
-if (!isset($widget) || empty($widget)) {
-	echo __('Widget model not loaded');
-	return;
-}
-
-if (version_compare($widget->version, '1.0') > 0) {
-	echo JText::_('Module viewer is older that the model');
-	return;
-}
 
 if (empty($widget->menu_items)) {
 	// there are no menu items - silent abort
@@ -29,30 +19,24 @@ if (empty($widget->menu_items)) {
 
 // load libraries
 
-if ($widget->load_libraries()) {
-	$dir = dirname(__FILE__);
+if ($widget->load_libraries(basename(__FILE__))) {
+	$layout_dir = dirname(__FILE__);
 
 	if ($widget->load_jquery) {
 		echo
-'<script type="text/javascript" src="' . plugins_url('/js/jquery-2.0.3.min.js', $dir) . '"></script>
+'<script type="text/javascript" src="' . plugins_url('/js/jquery-2.1.0.min.js', $layout_dir) . '"></script>
 ';
 	}
 
 	echo
-'<script type="text/javascript" src="' . plugins_url('/js/touchmenu.js', $dir) . '"></script>
+'<script type="text/javascript" src="' . plugins_url('/js/touchmenu.js', $layout_dir) . '"></script>
 ';
 
 	if ($widget->load_css) {
 		echo
-'<link href="' . plugins_url('/widget_layouts/default.css', $dir) . '" rel="stylesheet" type="text/css" />
+'<link href="' . plugins_url('/widget_layouts/default.css', $layout_dir) . '" rel="stylesheet" type="text/css" />
 ';
 	}
-
-	echo
-'<script type="text/javascript">
-document.wdg_touchmenu_db = [];
-</script>
-';
 }
 
 

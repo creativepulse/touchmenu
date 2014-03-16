@@ -2,7 +2,7 @@
 /**
  * Touch Menu
  *
- * @version 1.1
+ * @version 1.2
  * @author Creative Pulse
  * @copyright Creative Pulse 2013-2014
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL

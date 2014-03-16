@@ -1,10 +1,10 @@
 === Touch Menu ===
 Contributors: Creative Pulse
 Donate link: 
-Tags: free, font, css, size, sidebar, wordpress, widget
+Tags: free, menu, mobile, html, html5, wordpress, sidebar, plugin, widget
 Requires at least: 2.8.0
 Tested up to: 3.8.0
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,7 @@ Edit the menu-item pages and use the "Order" field to set the order you want.
 
 = The panels with the menu content do not appear, or they appear under other parts of the website =
 
+This can be caused by a number of reasons. A solution to a common problem is to edit the Z-Index.
 Edit the Touch Menu widget and set a number in the "Z-Index" field. Try 5, increase it in case it doesn't work.
 
 == Screenshots == 
@@ -49,11 +50,15 @@ No screenshots at this moment
 
 == Changelog ==
 
-= 1.3 =
+= 1.2 =
+* Various bug fixes
+* Restored support for multiple and customizable layouts
+* Upgraded jQuery to v2.1.0
+
+= 1.1 =
 * Opening version for WordPress
 
 == Upgrade Notice ==
 
 You can simply overwrite the old files with the new ones.
 
-No upgrade notice exists as this is the first version of the plugin.
